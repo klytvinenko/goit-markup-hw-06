@@ -577,7 +577,7 @@ ul,ol {
   position: relative;
   padding: 8px 64px 8px 24px;
   height: 40px;
-  background: var(--primary-button-color);
+  background-color: var(--primary-button-color);
   border-color: var(--primary-button-color);
   border-radius: 4px;
   color:var(--button-h1);
@@ -587,6 +587,13 @@ ul,ol {
   line-height: 1.5;
   margin-left: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subsribe-button:hover,
+.subsribe-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--button-hover);
+
 }
 .subscribe-wrap {
   position: relative;
@@ -598,11 +605,6 @@ ul,ol {
   transform: translateY(-50%);
 }
 
-.subsribe-button:focus,
-.subsribe-button:hover {
-  background-color: var(--button-hover);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
 
 /* ----PORTFOLIO---- */
 

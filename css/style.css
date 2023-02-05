@@ -544,7 +544,7 @@ ul,ol {
   margin-left: 120px;
 }
 .footer-subscribe {
-  margin-left: 80px;
+  margin-left:auto;
 
 }
 .subcribe-form {
@@ -567,15 +567,18 @@ ul,ol {
   border-radius: 4px;
   background-color: transparent;
   padding-left: 16px;
-  outline-color: var(--primary-button-color);
+  outline: none;
+  color: var(--input-text);
 }
 
 .subcribe-input:focus {
   border-color: var(--primary-button-color)
 }
 .subsribe-button {
-  position: relative;
-  padding: 8px 64px 8px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
   height: 40px;
   background-color: var(--primary-button-color);
   border-color: var(--primary-button-color);
@@ -599,10 +602,8 @@ ul,ol {
   position: relative;
 }
 .icon-subscribe {
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: 16px;
+
 }
 
 
@@ -740,13 +741,12 @@ ul,ol {
   top: 50%;
   left: 50%;
   width: 408px;
-  min-height: 576px;
   background-color: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 24px;
+  padding: 72px 24px 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -763,7 +763,20 @@ ul,ol {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--button-hover);
+}
+.modal-close:hover .icon-close-modal,
+.modal-close:focus .icon-close-modal {
+
+  fill:#E7E9FC;
+}
+
+
 .icon-close-modal {
 
 }
@@ -778,14 +791,14 @@ ul,ol {
   line-height: 1.5;
   color: var(--color-headlines);
   letter-spacing: 0.02em;
-  margin-top: 32px;
   margin-bottom: 14px;
+  text-align: center;
 }
 .modal-form {
 
 }
 .modal-field {
-  margin-bottom: 26px;
+  margin-bottom: 8px;
 }
 
 .input-wrap {
@@ -815,6 +828,7 @@ ul,ol {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 24px;
   background: var(--primary-button-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -900,5 +914,9 @@ ul,ol {
   background-repeat: no-repeat;
   background-position: center;
 
+}
+
+.a-privacy {
+  color:var(--button-hover);
 }
 
